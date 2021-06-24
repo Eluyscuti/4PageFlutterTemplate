@@ -11,7 +11,7 @@ class _Screen1State extends State<Screen1> {
     return Scaffold(
       //replace the body with the code for your page
       body: Center(
-        child: Text('hi'),
+        child: Text('Page 1'),
 
       ),
     );
