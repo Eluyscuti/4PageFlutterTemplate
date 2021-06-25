@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:four_page_app_template/post.dart';
+import 'package:four_page_app_template/screen_2.dart';
 import 'models/post_model.dart';
 import 'models/user.dart';
 
@@ -71,6 +72,16 @@ class _Screen1State extends State<Screen1> {
 
                     },
                   child: Text("Previous Post")
+
+                ),
+                RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Screen2()),);
+
+
+                    },
+                    child: Text("Make Post")
 
                 ),
                 RaisedButton(
