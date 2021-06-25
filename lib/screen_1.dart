@@ -25,6 +25,7 @@ class _Screen1State extends State<Screen1> {
 
 
         child: Column(
+
           children: [
             Container(
               margin: EdgeInsets.all(160.0),
@@ -57,20 +58,44 @@ class _Screen1State extends State<Screen1> {
                 ),
 
             ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                RaisedButton(
+                    onPressed: () {
+                      setState(() {
+                        index -=1;
+                      });
+
+
+                    },
+                  child: Text("Previous Post")
+
+                ),
+                RaisedButton(
+                    onPressed: () {
+                      setState(() {
+                        index +=1;
+                      });
+
+
+                    },
+                    child: Text("Next Post")
+
+                )
+              ],
+            )
 
 
 
           ],
-        )
+
+        ),
+
 
        ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        setState(() {
-          index +=1;
-        });
 
-
-      }),
 
       );
   }
