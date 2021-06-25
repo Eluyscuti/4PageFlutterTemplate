@@ -14,6 +14,28 @@ class Screen1 extends StatefulWidget {
 
 class _Screen1State extends State<Screen1> {
   int index = 0;
+
+  void check_index_add() {
+    if (index == posts.length-1){
+      ;
+    }
+    else {
+      setState(() {
+        index += 1;
+      });
+    }
+  }
+  void check_index_subtract() {
+    if (index == 0) {
+      ;
+    }
+    else {
+      setState(() {
+        index -= 1;
+      });
+    }
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,9 +87,7 @@ class _Screen1State extends State<Screen1> {
               children: [
                 RaisedButton(
                     onPressed: () {
-                      setState(() {
-                        index -=1;
-                      });
+                      check_index_subtract();
 
 
                     },
@@ -86,9 +106,7 @@ class _Screen1State extends State<Screen1> {
                 ),
                 RaisedButton(
                     onPressed: () {
-                      setState(() {
-                        index +=1;
-                      });
+                      check_index_add();
 
 
                     },

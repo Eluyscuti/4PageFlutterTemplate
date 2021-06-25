@@ -27,6 +27,10 @@ class _Screen2State extends State<Screen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Create Post'),
+        backgroundColor: Colors.deepOrange,
+      ),
       //replace the body with the code for your page
       body: Center(
         child: Column(
@@ -51,7 +55,11 @@ class _Screen2State extends State<Screen2> {
                 Navigator.pop(context,
                   MaterialPageRoute(builder: (context) => Screen1()),);
               }
-            })
+
+
+            },
+              child: Text("Create Post")
+            )
           ],
 
         ),

@@ -19,7 +19,7 @@ final User current_user = User(
 );
 
 final User user2 = User(
-    name: 'mama'
+    name: 'jim'
 );
 
 List<Post> posts = [
