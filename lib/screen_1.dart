@@ -18,6 +18,7 @@ class _Screen1State extends State<Screen1> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Feed'),
+        backgroundColor: Colors.deepOrange,
       ),
       //replace the body with the code for your page
       body: Center(
@@ -27,9 +28,35 @@ class _Screen1State extends State<Screen1> {
           children: [
             Container(
               margin: EdgeInsets.all(160.0),
-                child: Text(posts[index].caption)
+                padding: EdgeInsets.all(160.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          posts[index].sender
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          posts[index].caption
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
 
-            )
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+
+                ),
+
+            ),
 
 
 
@@ -41,6 +68,7 @@ class _Screen1State extends State<Screen1> {
         setState(() {
           index +=1;
         });
+
 
       }),
 
