@@ -38,7 +38,7 @@ class _Screen1State extends State<Screen1> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          posts[index].sender
+                          posts[index].sender.name
                         ),
                       ],
                     ),

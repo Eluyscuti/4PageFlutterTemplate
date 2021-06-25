@@ -3,8 +3,8 @@ import 'package:four_page_app_template/models/user.dart';
 
 
 class Post {
-  final String sender;
-  final String caption; // Would usually be type DateTime or Firebase Timestamp in production apps
+  final User sender;
+  String caption; // Would usually be type DateTime or Firebase Timestamp in production apps
 
 
   Post({
@@ -13,13 +13,22 @@ class Post {
 
   });
 }
+
+final User current_user = User(
+  name: 'joe'
+);
+
+final User user2 = User(
+    name: 'mama'
+);
+
 List<Post> posts = [
   Post(
-    sender: 'joe',
+    sender: current_user,
     caption: "whatsup"
   ),
   Post(
-      sender: 'mama',
+      sender: user2,
       caption: "hey"
   ),
 ];
